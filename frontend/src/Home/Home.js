@@ -9,7 +9,7 @@ export default function Home (){
             <div className='text' style = {{color: '#F2F2F2'}}>
                 <MainTitle style = {{marginTop: '15vh'}}>帅哥的主页</MainTitle>
                 <MainTitle style = {{marginTop: '5vh', fontFamily: 'Arial, serif'}}>A Handsome Guy's Homepage</MainTitle>
-                <form method = 'POST' action = "http://127.0.0.1:8000/postMessage/" style = {{marginTop: '10vh', textAlign: 'center'}}>
+                <form method = 'POST' action = "http://jiayuanchen.com:8002/postMessage/" style = {{marginTop: '10vh', textAlign: 'center'}}>
                     <DjangoCSRFToken />
                     <Title>Anything to say</Title>
                     <InputBox name = 'content' style = {{width: '90vw'}}/>

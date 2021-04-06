@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.views.decorators.csrf import ensure_csrf_cookie
+from django.http import HttpResponse
 
 from .models import Messages
 
@@ -21,4 +22,4 @@ def postMessage(request):
         message.ipAddress = ipAddress
         message.save()
 
-    return redirect("1.15.77.57")
+    return HttpResponse("<html><body>OK!</body></html>")
