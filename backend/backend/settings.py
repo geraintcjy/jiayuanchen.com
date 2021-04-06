@@ -24,7 +24,7 @@ SECRET_KEY = '+yc_oxixzbfd#dabnce#x)ieckhsz1ock#!a8(!c(lhnuvf&n-'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['1.15.77.57', 'jiayuanchen.com', 'localhost']
 
 # Application definition
 

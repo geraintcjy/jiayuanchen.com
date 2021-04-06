@@ -2,3 +2,4 @@
 dependencies/
 backend/db.sqlite3
 backend/backend/settings.py
+password.txt
