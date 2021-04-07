@@ -21,4 +21,4 @@ def postMessage(request):
         message.ipAddress = ipAddress
         message.save()
 
-    return redirect("http://jiayuanchen.com")
+    return redirect("http://jiayuanchen.com/submit")
