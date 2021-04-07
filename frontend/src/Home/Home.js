@@ -19,7 +19,7 @@ export default function Home (){
                     <div style = {{width: '220px', height: '2px', backgroundColor: '#CC5500', margin: 'auto', marginBottom: '2vh'}}/>
                     <Submit type = 'submit' value = 'Send' />
                 </form>
-                <div style = {{position: 'absolute', bottom: '5vh', left: 0, right: 0}}>Wechat: geraintcjy</div>
+                <div style = {{marginTop: '15vh'}}>Wechat: geraintcjy</div>
             </div>
         </div>
     )
