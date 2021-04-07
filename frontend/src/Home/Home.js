@@ -13,11 +13,13 @@ export default function Home (){
                     <DjangoCSRFToken />
                     <Title>Anything to say</Title>
                     <InputBox name = 'content' style = {{width: '90vw'}}/>
+                    <div style = {{width: '94vw', height: '2px', backgroundColor: '#CC5500', margin: 'auto', marginBottom: '5vh'}}/>
                     <Title>If you want to comment with your name</Title>
-                    <InputBox name = 'name' />
+                    <InputBox name = 'name' style = {{width: '200px'}}/>
+                    <div style = {{width: '220px', height: '2px', backgroundColor: '#CC5500', margin: 'auto', marginBottom: '2vh'}}/>
                     <Submit type = 'submit' value = 'Send' />
                 </form>
-                <div style = {{fontSize: '15px', marginTop: '15vh'}}>现在搞毕设 之后再弄</div>
+                <div style = {{position: 'absolute', bottom: '5vh', left: 0, right: 0}}>现在搞毕设 之后再弄</div>
             </div>
         </div>
     )
@@ -58,7 +60,6 @@ const Submit = styled.input`
   cursor: pointer;
   font-family: Arial,serif;
 `
-
 const MainTitle = styled.div`
   font-size: 35px;
   -webkit-user-select: none;
