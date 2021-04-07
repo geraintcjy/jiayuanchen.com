@@ -7,19 +7,19 @@ export default function Home (){
         <div className= 'Home'
              style = {{textAlign: 'center', fontFamily: 'Hiragino Sans GB', overflowX: 'hidden', backgroundColor: '#000034', height: '100vh'}}>
             <div className='text' style = {{color: '#F2F2F2'}}>
-                <MainTitle style = {{marginTop: '15vh'}}>帅哥的主页</MainTitle>
+                <MainTitle style = {{marginTop: '12vh'}}>帅哥的主页</MainTitle>
                 <MainTitle style = {{marginTop: '5vh', fontFamily: 'Arial, serif'}}>A Handsome Guy's Homepage</MainTitle>
-                <form method = 'POST' action = "http://jiayuanchen.com:8002/postMessage/" style = {{marginTop: '10vh', textAlign: 'center'}}>
+                <form method = 'POST' action = "http://jiayuanchen.com:8002/postMessage/" style = {{marginTop: '12vh', textAlign: 'center'}}>
                     <DjangoCSRFToken />
-                    <Title>Anything to say</Title>
+                    <Title>下面是留言板</Title>
                     <InputBox name = 'content' style = {{width: '90vw'}}/>
-                    <div style = {{width: '94vw', height: '2px', backgroundColor: '#CC5500', margin: 'auto', marginBottom: '5vh'}}/>
-                    <Title>If you want to comment with your name</Title>
+                    <div style = {{width: '60vw', height: '2px', backgroundColor: '#CC5500', margin: 'auto', marginBottom: '5vh'}}/>
+                    <Title>留个名字吗</Title>
                     <InputBox name = 'name' style = {{width: '200px'}}/>
                     <div style = {{width: '220px', height: '2px', backgroundColor: '#CC5500', margin: 'auto', marginBottom: '2vh'}}/>
                     <Submit type = 'submit' value = 'Send' />
                 </form>
-                <div style = {{position: 'absolute', bottom: '5vh', left: 0, right: 0}}>现在搞毕设 之后再弄</div>
+                <div style = {{position: 'absolute', bottom: '5vh', left: 0, right: 0}}>Wechat: geraintcjy</div>
             </div>
         </div>
     )
@@ -42,7 +42,6 @@ const Title = styled.div`
   color: #CC5500;
   font-weight: bold;
   margin-top: 2vh;
-  font-family: Arial,serif;
   -webkit-user-select: none;
   -moz-user-select:none;
   -ms-user-select:none;
@@ -52,7 +51,7 @@ const Submit = styled.input`
   background-color: #CC5500;
   border: none;
   font-size: 20px;
-  margin: 4vh auto 0 auto;
+  margin: 8vh auto 0 auto;
   height: 50px;
   width: 120px;
   color: #FFFFFF;
