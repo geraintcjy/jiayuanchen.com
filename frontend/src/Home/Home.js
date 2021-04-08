@@ -1,8 +1,17 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import DjangoCSRFToken from "django-react-csrftoken/src";
 import styled from 'styled-components';
+import axios from 'axios';
 
 export default function Home (){
+
+    useEffect(()=>{
+        console.log('hi');
+        axios.post("http://jiayuanchen.com:8002/initialization", {test: 'hello'})
+            .then(res => {})
+            .catch(error => {console.log(error)})
+    })
+
     return(
         <div className= 'Home'
              style = {{textAlign: 'center', fontFamily: 'Hiragino Sans GB', overflowX: 'hidden', backgroundColor: '#000034', height: '100vh'}}>

@@ -16,8 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from messageboard.views import postMessage
+from initialization.views import initialization
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('postMessage/', postMessage)
+    path('postMessage/', postMessage),
+    path('initialization/', initialization)
 ]
