@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.views.decorators.csrf import ensure_csrf_cookie
+from django.http import HttpResponse
 
 from .models import Messages
 
@@ -20,5 +21,12 @@ def postMessage(request):
         message.content = content
         message.ipAddress = ipAddress
         message.save()
+
+    elif request.method == 'OPTIONS':
+        res = HttpResponse('')
+        res.__setitem__('Access-Control-Allow-Origin', '*')
+        res.__setitem__('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization')
+        res.__setitem__('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,PATCH,OPTIONS')
+        return res
 
     return redirect("http://jiayuanchen.com/submit")

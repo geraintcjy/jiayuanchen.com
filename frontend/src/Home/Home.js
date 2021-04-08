@@ -2,12 +2,11 @@ import React, {useEffect} from 'react';
 import DjangoCSRFToken from "django-react-csrftoken/src";
 import styled from 'styled-components';
 import axios from 'axios';
+import qs from 'qs'
 
 export default function Home (){
-
     useEffect(()=>{
-        console.log('hi');
-        axios.post("http://jiayuanchen.com:8002/initialization", {test: 'hello'})
+        axios.post("http://jiayuanchen.com:8002/initialization/", {test: 'hello'})
             .then(res => {})
             .catch(error => {console.log(error)})
     })
