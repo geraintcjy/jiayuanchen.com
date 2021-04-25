@@ -25,7 +25,7 @@ SECRET_KEY = '+yc_oxixzbfd#dabnce#x)ieckhsz1ock#!a8(!c(lhnuvf&n-'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['1.15.77.57', 'jiayuanchen.com', 'localhost']
+ALLOWED_HOSTS = ['1.15.77.57', 'jiayuanchen.com', 'www.jiayuanchen.com', 'localhost']
 
 # Application definition
 
@@ -37,8 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'corsheaders',
-    'messageboard.apps.MessageboardConfig',
-    'initialization.apps.InitializationConfig'
+    'allApis.apps.AllapisConfig'
 ]
 
 MIDDLEWARE = [
@@ -81,9 +80,9 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'jiayuanchen',
         'USER': 'root',
-        'PASSWORD': '!@#chen5512',
+        'PASSWORD': '!@#Chen5512',
         'HOST': 'localhost',
-        'POST': 3306,
+        'POST': '',
     }
 }
 

@@ -15,11 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from messageboard.views import postMessage
-from initialization.views import initialization
+from allApis import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('postMessage/', postMessage),
-    path('initialization/', initialization)
+    path('postMessage/', views.postMessage),
+    path('initialization/', views.initialization)
 ]
