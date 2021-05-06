@@ -15,7 +15,7 @@ export default function Home (){
         <div className= 'Home'
              style = {{textAlign: 'center', fontFamily: 'Hiragino Sans GB', overflowX: 'hidden', backgroundColor: '#000034', height: '100vh'}}>
             <div className='text' style = {{color: '#F2F2F2'}}>
-                <MainTitle style = {{marginTop: '8vh'}}>Introduction</MainTitle>
+                <MainTitle style = {{marginTop: '8vh'}}>About Myself</MainTitle>
                 <Text style = {{marginTop: '5vh'}}>
                     Hi, my name is Jiayuan Chen, a senior studying Civil Engineering at Tongji University.
                 </Text>
@@ -28,15 +28,25 @@ export default function Home (){
                 </Text>
                 <form method = 'POST' action = "http://jiayuanchen.com:8002/postMessage/" style = {{marginTop: '8vh', textAlign: 'center'}}>
                     <DjangoCSRFToken />
-                    <Title>下面是留言板</Title>
+                    <Title>Below is a message board</Title>
                     <InputBox name = 'content' style = {{width: '90vw'}}/>
                     <div style = {{width: '60vw', height: '2px', backgroundColor: '#CC5500', margin: 'auto', marginBottom: '5vh'}}/>
-                    <Title>留个名字吗</Title>
+                    <Title>Signature</Title>
                     <InputBox name = 'name' style = {{width: '200px'}}/>
-                    <div style = {{width: '220px', height: '2px', backgroundColor: '#CC5500', margin: 'auto', marginBottom: '2vh'}}/>
+                    <div style = {{width: '220px', height: '2px', backgroundColor: '#CC5500', margin: 'auto'}}/>
                     <Submit type = 'submit' value = 'Send' />
                 </form>
-                <div style = {{marginTop: '8vh', fontFamily: 'Verdana, sans-serif'}}>Wechat: geraintcjy</div>
+                <div style = {{marginTop: '6vh', fontFamily: 'Verdana, sans-serif'}}>
+                    Wechat: geraintcjy
+                    <br />
+                    <br />
+                    <a
+                        href = "https://beian.miit.gov.cn/"
+                        style = {{
+                            textDecoration: 'none',
+                            color: '#F2F2F2'
+                        }}>沪ICP备2021009744号</a>
+                </div>
             </div>
         </div>
     )
