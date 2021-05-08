@@ -6,16 +6,16 @@ import qs from 'qs'
 
 export default function Home (){
     useEffect(()=>{
-        axios.post("http://jiayuanchen.com:8002/initialization/", {test: 'hello'})
+        axios.post("https://jiayuanchen.com:8002/initialization/", {})
             .then(res => {})
-            .catch(error => {console.log(error)})
+            .catch(error => {})
     })
 
     return(
         <div className= 'Home'
              style = {{textAlign: 'center', fontFamily: 'Hiragino Sans GB', overflowX: 'hidden', backgroundColor: '#000034', height: '100vh'}}>
-            <div className='text' style = {{color: '#F2F2F2'}}>
-                <MainTitle style = {{marginTop: '8vh'}}>About Myself</MainTitle>
+            <div className='text' style = {{color: '#F2F2F2', display: 'flex', flexDirection: 'column'}}>
+                <MainTitle style = {{marginTop: '5vh'}}>About Myself</MainTitle>
                 <Text style = {{marginTop: '5vh'}}>
                     Hi, my name is Jiayuan Chen, a senior studying Civil Engineering at Tongji University.
                 </Text>
@@ -26,7 +26,7 @@ export default function Home (){
                     In this fall, I am going to Georgia Tech to pursue a Master's degree in Computational Science and Engineering.
                     Should you have any requests or questions, please feel free to contact me.
                 </Text>
-                <form method = 'POST' action = "http://jiayuanchen.com:8002/postMessage/" style = {{marginTop: '8vh', textAlign: 'center'}}>
+                <form method = 'POST' action = "https://jiayuanchen.com:8002/postMessage/" style = {{marginTop: '8vh', textAlign: 'center'}}>
                     <DjangoCSRFToken />
                     <Title>Below is a message board</Title>
                     <InputBox name = 'content' style = {{width: '90vw'}}/>
