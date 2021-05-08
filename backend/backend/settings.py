@@ -25,7 +25,7 @@ SECRET_KEY = '+yc_oxixzbfd#dabnce#x)ieckhsz1ock#!a8(!c(lhnuvf&n-'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['1.15.77.57', 'jiayuanchen.com', 'www.jiayuanchen.com', 'localhost']
+ALLOWED_HOSTS = ['* ']
 
 # Application definition
 
@@ -37,7 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'corsheaders',
-    'allApis.apps.AllapisConfig'
+    'allApis.apps.AllapisConfig',
+    'werkzeug_debugger_runserver',
+    'django_extensions',
 ]
 
 MIDDLEWARE = [

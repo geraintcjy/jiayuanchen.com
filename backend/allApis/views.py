@@ -50,4 +50,4 @@ def postMessage(request):
         res.__setitem__('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,PATCH,OPTIONS')
         return res
 
-    return redirect("http://jiayuanchen.com/submit")
+    return redirect("https://jiayuanchen.com/submit")
