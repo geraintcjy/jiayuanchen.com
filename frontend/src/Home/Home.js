@@ -9,20 +9,24 @@ export default function Home (){
         axios.post("https://jiayuanchen.com:8002/initialization/", {})
             .then(res => {})
             .catch(error => {})
+
+        console.log(navigator.userAgent);
     })
 
     return(
         <div className= 'Home'
              style = {{textAlign: 'center', fontFamily: 'Hiragino Sans GB', overflowX: 'hidden', backgroundColor: '#000034', height: '100vh'}}>
             <div className='text' style = {{color: '#F2F2F2', display: 'flex', flexDirection: 'column'}}>
-                <MainTitle style = {{marginTop: '5vh'}}>About Myself</MainTitle>
-                <Text style = {{marginTop: '5vh'}}>
+                <MainTitle isPC = {isPC()} style = {{marginTop: '5vh'}}>
+                    Jiayuan Chen | 陈嘉缘
+                </MainTitle>
+                <Text isPC = {isPC()} style = {{marginTop: '5vh'}}>
                     Hi, my name is Jiayuan Chen, a senior studying Civil Engineering at Tongji University.
                 </Text>
-                <Text>
+                <Text isPC = {isPC()}>
                     I see myself as a novelty seeker, a team player and an eclecticist. I love tech all the time, parties in most circumstances, and soccer occasionally.
                 </Text>
-                <Text>
+                <Text isPC = {isPC()}>
                     In this fall, I am going to Georgia Tech to pursue a Master's degree in Computational Science and Engineering.
                     Should you have any requests or questions, please feel free to contact me.
                 </Text>
@@ -50,6 +54,22 @@ export default function Home (){
             </div>
         </div>
     )
+}
+
+function isPC() {
+    const userAgentInfo = navigator.userAgent;
+    const Agents = ["Android", "iPhone", "SymbianOS", "Windows Phone", "iPod"];
+    let flag = true;
+    for (let v = 0; v < Agents.length; v++) {
+        if (userAgentInfo.indexOf(Agents[v]) > 0) {
+            flag = false;
+            break;
+        }
+    }
+    if(window.screen.width>=768){
+        flag = true;
+    }
+    return flag;
 }
 
 const InputBox = styled.input`
@@ -88,7 +108,7 @@ const Submit = styled.input`
   font-family: Verdana, sans-serif;
 `
 const MainTitle = styled.div`
-  font-size: 35px;
+  font-size: ${props => {return props.isPC ? '35px' : '25px'}};
   font-family: Verdana, PMingLiU, sans-serif;
   -webkit-user-select: none;
   -moz-user-select:none;
@@ -96,7 +116,7 @@ const MainTitle = styled.div`
 `
 const Text = styled.div`
   text-align: left;
-  width: 750px;
+  width: ${props => {return props.isPC ? '750px' : '80%'}};
   margin: 0 auto 8px auto;
   font-size: 16px;
   line-height: 30px;
