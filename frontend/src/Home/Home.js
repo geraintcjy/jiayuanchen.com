@@ -45,16 +45,16 @@ export default function Home (){
                     <Submit type = 'submit' value = 'Send' />
                 </form>
 
-                <div style = {{marginTop: '6vh', fontFamily: 'Verdana, sans-serif'}}>
-                    Wechat: geraintcjy
+                <div style = {{marginTop: '8vh', fontFamily: 'Verdana, sans-serif'}}>
+                    Wechat: geraintcjy | Email: geraintcjy@gmail.com
                 </div>
                 <div style = {{marginTop: '1vh', fontFamily: 'Verdana, sans-serif'}}>
-                    Email: geraintcjy@gmail.com
+                    Last Updated: 17 June, 2021
                 </div>
                 <div style = {{marginTop: '1vh', fontFamily: 'Verdana, sans-serif'}}>
                     <a
                         href = "https://beian.miit.gov.cn/"
-                        style = {{textDecoration: 'none', color: '#F2F2F2'}}
+                        style = {{textDecoration: 'none', color: 'transparent'}}
                         target = "_blank"
                         rel="noreferrer">沪ICP备2021009744号</a>
                 </div>
@@ -111,7 +111,7 @@ export function setRainBack(){
 
         domready(function(){
             const loader = new THREE.TextureLoader();
-            loader.load('./Home/smoke-1.png', (texture) => {
+            loader.load("smoke-1.png", (texture) => {
                 let cloudGeo = new THREE.PlaneBufferGeometry(500, 500);
                 const cloudMaterial = new THREE.MeshLambertMaterial({
                     map: texture,
@@ -120,9 +120,9 @@ export function setRainBack(){
                 for(let p=0; p<25; p++) {
                     let cloud = new THREE.Mesh(cloudGeo, cloudMaterial);
                     cloud.position.set(
-                        Math.random()*1100 - 550,
-                        500,
-                        Math.random()*800 - 400
+                        900 * (Math.random()-0.5), //控制云大约左右方向移动
+                        500, //控制云的高度
+                        700 * (Math.random()-0.5) - 400 //控制云大约竖直方向移动
                     );
                     cloud.rotation.x = 1.16;
                     cloud.rotation.y = -0.12;
