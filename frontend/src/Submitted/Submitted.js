@@ -16,7 +16,7 @@ export default function Submitted (){
                 <MainTitle style = {{marginTop: '40vh'}}>
                     Thanks
                 </MainTitle>
-                <div style = {{marginTop: '5vh'}}><Link to="/home" style = {{color: '#F2F2F2'}}>返回</Link></div>
+                <div style = {{marginTop: '5vh'}}><Link to="/home" style = {{color: '#F2F2F2', fontSize: '18px'}}>Back</Link></div>
             </div>
             <div id = "home-background" style = {{position: 'absolute', zIndex: '-1', top: '0'}}>
 

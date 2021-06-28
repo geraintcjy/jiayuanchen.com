@@ -27,14 +27,14 @@ export default function Home (){
                     Hi, my name is Jiayuan Chen, a senior studying Civil Engineering at Tongji University.
                 </Text>
                 <Text isPC = {isPC()}>
-                    I see myself as a novelty seeker, a team player and an eclecticist. I love stuff with innovation and passion, such as tech, parties and soccer.
+                    I see myself as a novelty seeker, a team player and an eclecticist. I actively took part in a variety of interdisciplinary researches and internships which included works of structural analysis, digital twin modeling, fullstack web development and so on. In addtion to my academic endeavors, I am also quite willing to connect with people and to engage in all kinds of social and sports activities.
                 </Text>
                 <Text isPC = {isPC()}>
                     In this fall, I am going to Georgia Tech to pursue a Master's degree in Computational Science and Engineering.
                     Should you have any requests, please feel free to contact me.
                 </Text>
 
-                <form method = 'POST' action = {config.BACKEND_DOMAIN + "/postMessage/"} style = {{marginTop: '8vh', textAlign: 'center'}} onSubmit={messageBoardCheck}>
+                <form method = 'POST' action = {config.BACKEND_DOMAIN + "/postMessage/"} style = {{marginTop: '4vh', textAlign: 'center'}} onSubmit={messageBoardCheck}>
                     <DjangoCSRFToken />
                     <Title>Below is a message board</Title>
                     <InputBox name = 'content' id = 'content' style = {{width: '90vw'}}/>
@@ -45,23 +45,28 @@ export default function Home (){
                     <Submit type = 'submit' value = 'Send' />
                 </form>
 
-                <div style = {{marginTop: '8vh', fontFamily: 'Verdana, sans-serif'}}>
-                    Wechat: geraintcjy | Email: geraintcjy@gmail.com
-                </div>
-                <div style = {{marginTop: '1vh', fontFamily: 'Verdana, sans-serif'}}>
-                    Last Updated: 17 June, 2021
-                </div>
-                <div style = {{marginTop: '1vh', fontFamily: 'Verdana, sans-serif'}}>
-                    <a
-                        href = "https://beian.miit.gov.cn/"
-                        style = {{textDecoration: 'none', color: 'transparent'}}
-                        target = "_blank"
-                        rel="noreferrer">沪ICP备2021009744号</a>
+                <div className="contactInfo" style={{position:"fixed", bottom: '0', height: '4vh', width: '100vw',
+                    backgroundColor: "#555555", opacity: 0.5, display: "flex", alignItems: 'center',
+                    justifyContent: "space-around", fontFamily: 'Verdana, sans-serif'}}>
+                    <div style = {{flexGrow: 1}}>
+                        Wechat: geraintcjy
+                    </div>
+                    <div style = {{flexGrow: 1}}>
+                        Email: geraintcjy@gmail.com
+                    </div>
+                    <div style = {{flexGrow: 1}}>
+                        <a
+                            href = "https://beian.miit.gov.cn/"
+                            style = {{textDecoration: 'none', color: '#F2F2F2'}}
+                            target = "_blank"
+                            rel="noreferrer">沪ICP备2021009744号</a>
+                    </div>
+                    <div style = {{flexGrow: 1}}>
+                        Last Updated: June, 2021
+                    </div>
                 </div>
             </div>
-            <div id = "home-background" style = {{position: 'absolute', zIndex: '-1', top: '0'}}>
-
-            </div>
+            <div id = "home-background" style = {{position: 'absolute', zIndex: '-1', top: '0'}} />
         </div>
     )
 }
@@ -233,7 +238,6 @@ const Submit = styled.input`
   &:hover{
     background-color: #B54D00;
   }
-  
 `
 const MainTitle = styled.div`
   font-size: ${props => {return props.isPC ? '35px' : '25px'}};
