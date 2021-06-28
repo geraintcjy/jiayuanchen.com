@@ -21,6 +21,7 @@ export default function Home (){
     const wechatEnter = () => {
         const imageDiv = document.getElementById('wechatImage');
         imageDiv.style.display = '';
+        clearInterval(removeQR);
         showQR = setInterval(() => {
             if (imageDiv.style.opacity < 0.5){
                 imageDiv.style.opacity = (Number(imageDiv.style.opacity)+0.01).toString();
@@ -71,7 +72,7 @@ export default function Home (){
                     {' '}
                     <span>
                         <a style = {{display: "inline-block", fontWeight: 'bold'}}
-                           href = "CV-English.pdf"
+                           href = "CV-JiayuanChen.pdf"
                            target = "_blank">
                             here
                         </a>
