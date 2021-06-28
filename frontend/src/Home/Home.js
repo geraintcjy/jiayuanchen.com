@@ -16,6 +16,36 @@ export default function Home (){
     setRainBack();
     })
 
+    let showQR = () => {}, removeQR = () => {};
+
+    const wechatEnter = () => {
+        const imageDiv = document.getElementById('wechatImage');
+        imageDiv.style.display = '';
+        showQR = setInterval(() => {
+            if (imageDiv.style.opacity < 0.5){
+                imageDiv.style.opacity = (Number(imageDiv.style.opacity)+0.01).toString();
+            }
+            else{
+                clearInterval(showQR);
+            }
+        }, 6)
+    }
+
+    const wechatLeave = () => {
+        const imageDiv = document.getElementById('wechatImage');
+        clearInterval(showQR);
+        removeQR = setInterval(() => {
+            if (imageDiv.style.opacity > 0){
+                imageDiv.style.opacity = (Number(imageDiv.style.opacity)-0.01).toString();
+            }
+            else{
+                imageDiv.style.display = 'none';
+                imageDiv.style.opacity = '0';
+                clearInterval(removeQR);
+            }
+        }, 6)
+    }
+
     return(
         <div className= 'Home'
              style = {{textAlign: 'center', fontFamily: 'Hiragino Sans GB', overflowX: 'hidden', backgroundColor: 'transparent', height: '100vh'}}>
@@ -34,6 +64,20 @@ export default function Home (){
                     Should you have any requests, please feel free to contact me.
                 </Text>
 
+                <Text isPC = {isPC()}>
+                    <span>
+                        You can download my CV from
+                    </span>
+                    {' '}
+                    <span>
+                        <a style = {{display: "inline-block", fontWeight: 'bold'}}
+                           href = "CV-English.pdf"
+                           target = "_blank">
+                            here
+                        </a>
+                    </span>
+                </Text>
+
                 <form method = 'POST' action = {config.BACKEND_DOMAIN + "/postMessage/"} style = {{marginTop: '4vh', textAlign: 'center'}} onSubmit={messageBoardCheck}>
                     <DjangoCSRFToken />
                     <Title>Below is a message board</Title>
@@ -48,22 +92,34 @@ export default function Home (){
                 <div className="contactInfo" style={{position:"fixed", bottom: '0', height: '4vh', width: '100vw',
                     backgroundColor: "#555555", opacity: 0.5, display: "flex", alignItems: 'center',
                     justifyContent: "space-around", fontFamily: 'Verdana, sans-serif'}}>
-                    <div style = {{flexGrow: 1}}>
+                    <div style = {{flexGrow: 1, overflow: 'hidden', userSelect: 'none'}} onMouseEnter={wechatEnter} onMouseLeave={wechatLeave}>
                         Wechat: geraintcjy
                     </div>
-                    <div style = {{flexGrow: 1}}>
+                    <div style = {{flexGrow: 1, overflow: 'hidden'}}>
                         Email: geraintcjy@gmail.com
                     </div>
-                    <div style = {{flexGrow: 1}}>
+                    <div style = {{flexGrow: 1, overflow: 'hidden'}}>
+                        <a
+                            href = "https://github.com/geraintcjy"
+                            style = {{textDecoration: 'none', color: '#F2F2F2'}}
+                            target = "_blank"
+                            rel="noreferrer">Github</a>
+                    </div>
+                    <div style = {{flexGrow: 1, overflow: 'hidden', userSelect: 'none'}}>
+                        Last Updated: June, 2021
+                    </div>
+                    <div style = {{flexGrow: 0.8, overflow: 'hidden'}}>
                         <a
                             href = "https://beian.miit.gov.cn/"
                             style = {{textDecoration: 'none', color: '#F2F2F2'}}
                             target = "_blank"
                             rel="noreferrer">沪ICP备2021009744号</a>
                     </div>
-                    <div style = {{flexGrow: 1}}>
-                        Last Updated: June, 2021
-                    </div>
+                </div>
+
+                <div id='wechatImage' style={{position:"fixed", bottom: '4vh', height: '200px', width: '200px',
+                    backgroundColor: "#555555", display: 'none', opacity: 0}}>
+                    <img src="wechat.jpg" alt='wechat QR code' />
                 </div>
             </div>
             <div id = "home-background" style = {{position: 'absolute', zIndex: '-1', top: '0'}} />
