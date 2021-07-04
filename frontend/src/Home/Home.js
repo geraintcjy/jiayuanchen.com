@@ -54,20 +54,23 @@ export default function Home (){
                 <MainTitle isPC = {isPC()} style = {{marginTop: '5vh'}}>
                     Jiayuan Chen (陈嘉缘)
                 </MainTitle>
+                <div id={"photo"} style = {{marginTop: '5vh'}}>
+                    <img src={"photo-small.jpg"} alt={"photo"} width={"300px"}/>
+                </div>
                 <Text isPC = {isPC()} style = {{marginTop: '5vh'}}>
-                    Hi, my name is Jiayuan Chen, a senior studying Civil Engineering at Tongji University.
+                    I am Jiayuan Chen (also called Geraint Chen), a senior studying Civil Engineering at Tongji University.
                 </Text>
                 <Text isPC = {isPC()}>
-                    I see myself as a novelty seeker, a team player and an eclecticist. I actively took part in a variety of interdisciplinary researches and internships which included works of structural analysis, digital twin modeling, fullstack web development and so on. In addtion to my academic endeavors, I am also quite willing to connect with people and to engage in all kinds of social and sports activities.
+                    I see myself as a novelty seeker, a team player and an eclecticist. I actively took part in a variety of interdisciplinary researches and internships, concerning the areas such as structural design and analysis, digital twin & machine learning, and web & software development. In addition to my academic endeavors, I am also quite willing to connect with people and to engage in all kinds of entertaining and sports activities.
                 </Text>
                 <Text isPC = {isPC()}>
-                    In this fall, I am going to Georgia Tech to pursue a Master's degree in Computational Science and Engineering.
-                    Should you have any requests, please feel free to contact me.
+                    Soon, I am going to Georgia Tech to pursue a Master's degree in Computational Science and Engineering. I will graduate in 2023 and is currently looking for summer intern opportunities.
+                    Should you have any questions or requests, please feel free to contact me.
                 </Text>
 
                 <Text isPC = {isPC()}>
                     <span>
-                        You can download my CV from
+                        You can acquire my CV from
                     </span>
                     {' '}
                     <span>
@@ -90,32 +93,36 @@ export default function Home (){
                     <Submit type = 'submit' value = 'Send' />
                 </form>
 
-                <div className="contactInfo" style={{position:"fixed", bottom: '0', height: '4vh', width: '100vw',
+                <div style={{height: '8vh'}} />
+
+                <div className="contactInfo" style={{position:"fixed", bottom: '0', width: '100vw', paddingBottom: '1vh', paddingTop:'1vh',
                     backgroundColor: "#555555", opacity: 0.5, display: "flex", alignItems: 'center',
                     justifyContent: "space-around", fontFamily: 'Verdana, sans-serif'}}>
-                    <div style = {{flexGrow: 1, overflow: 'hidden', userSelect: 'none'}} onMouseEnter={wechatEnter} onMouseLeave={wechatLeave}>
+                    <FootText style = {{userSelect: 'none'}} onMouseEnter={wechatEnter} onMouseLeave={wechatLeave}>
                         Wechat: geraintcjy
-                    </div>
-                    <div style = {{flexGrow: 1, overflow: 'hidden'}}>
+                    </FootText>
+                    <FootText>
                         Email: geraintcjy@gmail.com
-                    </div>
-                    <div style = {{flexGrow: 1, overflow: 'hidden'}}>
+                    </FootText>
+                    <FootText>
                         <a
                             href = "https://github.com/geraintcjy"
                             style = {{textDecoration: 'none', color: '#F2F2F2'}}
                             target = "_blank"
                             rel="noreferrer">Github</a>
-                    </div>
-                    <div style = {{flexGrow: 1, overflow: 'hidden', userSelect: 'none'}}>
+                    </FootText>
+                    <FootText style = {{userSelect: 'none'}}>
                         Last Updated: June, 2021
-                    </div>
-                    <div style = {{flexGrow: 0.8, overflow: 'hidden'}}>
+                    </FootText>
+                    {/*
+                    <FootText style = {{flexGrow: 0.8}}>
                         <a
                             href = "https://beian.miit.gov.cn/"
                             style = {{textDecoration: 'none', color: '#F2F2F2'}}
                             target = "_blank"
                             rel="noreferrer">沪ICP备2021009744号</a>
-                    </div>
+                    </FootText>
+                    */}
                 </div>
 
                 <div id='wechatImage' style={{position:"fixed", bottom: '4vh', height: '200px', width: '200px',
@@ -313,4 +320,10 @@ const Text = styled.div`
   -webkit-user-select: none;
   -moz-user-select:none;
   -ms-user-select:none;
+`
+const FootText = styled.div`
+  flex-grow: 1;
+  font-size: 8px;
+  padding-left: 4px;
+  padding-right: 4px;
 `
