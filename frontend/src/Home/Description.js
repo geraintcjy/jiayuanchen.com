@@ -13,17 +13,17 @@ export default function Description() {
                 <span>When I was in my undergraduate, I actively took part in a variety of interdisciplinary research projects and internships </span>
                 <span>in areas including structural design & analysis, </span>
                 <span>digital twin & machine learning in civil engineering, model numerical simulation and engineering software development. </span>
-                <span>Without doubt, these experience have improved my academic and research skills, making me an outstanding graduate of Tongji University.</span>
-                <span>More importantly, it also allowed me to accumulate plenty of valuable practical experience.</span>
+                <span>Without doubt, these experience had improved my academic and research skills, making me an outstanding graduate of Tongji University.</span>
+                <span>More importantly, it also allowed me to accumulate plenty of valuable practical experience that would be helpful in professional aspects.</span>
             </Text>
             <Text isPC = {isPC()}>&emsp;&emsp;
-                <span>Though being a bit nerdy in school, I am quite outgoing and approachable in life off campus. </span>
+                <span>Though being a bit nerdy in school, I am quite outgoing and approachable in off-campus life. </span>
                 <span>I love to connect with people and to engage in a variety of social and sports activities. </span>
-                <span>For me, talking to people is an effective approach to addressing problems in life, and it usually will be a great pleasure.</span>
+                <span>For me, talking to people is an effective approach to addressing problems in life, and it usually will be interesting and entertaining.</span>
             </Text>
             <Text isPC = {isPC()}>&emsp;&emsp;
-                <span>I will graduate in 2023 and am currently looking for 2022 summer internship opportunities. </span>
-                <span>Should you have any questions, please feel free to contact me.</span>
+                <span>My estimate graduation is in 2023 and I am currently looking for 2022 summer internship opportunities. </span>
+                <span>Should you have any questions, please feel free to contact me via information listed below.</span>
             </Text>
 
             <Text isPC = {isPC()}>&emsp;&emsp;
