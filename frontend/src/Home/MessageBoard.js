@@ -2,6 +2,7 @@ import React from 'react';
 import * as config from "../Config";
 import DjangoCSRFToken from "django-react-csrftoken/src";
 import styled from "styled-components";
+import { CJY_ORANGE } from "../Config";
 
 export default function MessageBoard() {
     return (
@@ -11,10 +12,10 @@ export default function MessageBoard() {
                 <DjangoCSRFToken />
                 <Title>Below is a message board</Title>
                 <InputBox name = 'content' id = 'content' style = {{width: '90vw'}}/>
-                <div style = {{width: '60vw', height: '2px', backgroundColor: '#CC5500', margin: 'auto', marginBottom: '5vh'}}/>
+                <div style = {{width: '60vw', height: '2px', backgroundColor: CJY_ORANGE, margin: 'auto', marginBottom: '5vh'}}/>
                 <Title>Signature</Title>
                 <InputBox name = 'name' id = 'name' style = {{width: '200px'}}/>
-                <div style = {{width: '220px', height: '2px', backgroundColor: '#CC5500', margin: 'auto'}}/>
+                <div style = {{width: '220px', height: '2px', backgroundColor: CJY_ORANGE, margin: 'auto'}}/>
                 <Submit type = 'submit' value = 'Send' />
             </form>
         </div>
@@ -42,7 +43,7 @@ const InputBox = styled.input`
 `
 const Title = styled.div`
   font-size: 20px;
-  color: #CC5500;
+  color: ${CJY_ORANGE};
   font-weight: bold;
   margin-top: 2vh;
   font-family: Verdana, PMingLiU, sans-serif;
@@ -52,7 +53,7 @@ const Title = styled.div`
 `
 const Submit = styled.input`
   -webkit-appearance:none;
-  background-color: #CC5500;
+  background-color: ${CJY_ORANGE};
   border: none;
   font-size: 20px;
   margin: 8vh auto 0 auto;

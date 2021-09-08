@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { CJY_WHITE } from "../Config";
 
 export default function Foot(){
     let showQR = () => {}, removeQR = () => {};
@@ -47,7 +48,7 @@ export default function Foot(){
                 <FootText>
                     <a
                         href = "https://github.com/geraintcjy"
-                        style = {{textDecoration: 'none', color: '#F2F2F2'}}
+                        style = {{textDecoration: 'none', color: CJY_WHITE}}
                         target = "_blank"
                         rel="noreferrer">Github</a>
                 </FootText>
