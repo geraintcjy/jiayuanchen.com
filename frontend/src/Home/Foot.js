@@ -53,7 +53,7 @@ export default function Foot(){
                         rel="noreferrer">Github</a>
                 </FootText>
                 <FootText style = {{userSelect: 'none'}}>
-                    Last Updated: August, 2021
+                    Last Updated: December, 2021
                 </FootText>
                 {/*
                     <FootText style = {{flexGrow: 0.8}}>

@@ -5,39 +5,42 @@ import styled from "styled-components";
 export default function Description() {
     return (
         <div>
-            <Text isPC = {isPC()}>&emsp;&emsp;
-                <span>My name is Jiayuan Chen, a Master's Computational Science & Engineering student of Georgia Tech.</span>
+            <Text isPC = { isPC() }>&emsp;&emsp;
+                <span>My name is Jiayuan Chen, a Master's in CSE major at Georgia Tech.</span>
             </Text>
-            <Text isPC = {isPC()}>&emsp;&emsp;
+            <Text isPC = { isPC() }>&emsp;&emsp;
                 <span>I see myself as a novelty seeker, a team player and an eclecticist. </span>
-                <span>When I was in my undergraduate, I actively took part in a variety of interdisciplinary research projects and internships </span>
-                <span>in areas including structural design & analysis, </span>
-                <span>digital twin & machine learning in civil engineering, model numerical simulation and engineering software development. </span>
-                <span>Without doubt, these experience had improved my academic and research skills, making me an outstanding graduate of Tongji University.</span>
-                <span>More importantly, it also allowed me to accumulate plenty of valuable practical experience that would be helpful in professional aspects.</span>
+                <span>During my undergraduate study, I actively took part in a variety of interdisciplinary research projects and internships </span>
+                <span>regarding structural analysis, </span>
+                <span>digital twin & machine learning, numerical simulation and software development. </span>
+                <span>I really learned a lot from these experience.</span>
             </Text>
-            <Text isPC = {isPC()}>&emsp;&emsp;
-                <span>Though being a bit nerdy in school, I am quite outgoing and approachable in off-campus life. </span>
+            <Text isPC = { isPC() }>&emsp;&emsp;
+                <span>I am a quite outgoing and approachable person. </span>
                 <span>I love to connect with people and to engage in a variety of social and sports activities. </span>
-                <span>For me, talking to people is an effective approach to addressing problems in life, and it usually will be interesting and entertaining.</span>
+                <span>Among all these, basketball, soccer, board games and Paradox games (they are awesome!) are my favorite. </span>
+                <span style = {{fontWeight: "bold"}}>I am looking for someone to share Spotify family plan. If you are interested, please contace me.</span>
+                <span>The photo on the right was shot by my GF during our trip to NYC in September. I super love NYC (and Ichiran) (and my GF).</span>
             </Text>
-            <Text isPC = {isPC()}>&emsp;&emsp;
-                <span>My estimate graduation is in 2023 and I am currently looking for 2022 summer internship opportunities. </span>
-                <span>Should you have any questions, please feel free to contact me via information listed below.</span>
+            <Text isPC = { isPC() }>&emsp;&emsp;
+                <span>My estimated graduation date is in May, 2023 and I am currently looking for 2022 summer internship opportunities. </span>
+                <span>Should you have any questions, please feel free to contact me. </span>
+                <span>I would really appreciate it if you could offer any job information, opportunities or referrals. </span>
             </Text>
 
-            <Text isPC = {isPC()}>&emsp;&emsp;
+            <Text isPC = { isPC() }>&emsp;&emsp;
                     <span>
                         You can download my CV from
                     </span>
                     {' '}
                     <span>
                         <a style = {{display: "inline-block", fontWeight: 'bold'}}
-                           href = "CV-JiayuanChen.pdf"
+                           href = "Resume-JiayuanChen.pdf"
                            target = "_blank">
                             here
                         </a>
                     </span>
+                    {'.'}
             </Text>
         </div>
     )
