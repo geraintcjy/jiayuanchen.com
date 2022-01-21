@@ -6,38 +6,36 @@ export default function Description() {
     return (
         <div>
             <Text isPC = { isPC() }>&emsp;&emsp;
-                <span>My name is Jiayuan Chen, a Master's in CSE major at Georgia Tech.</span>
+                <span>Hi there! Welcome to my website and thanks for visiting!</span>
+                <span>My name is Jiayuan (jah-yoo-aan) Chen, and I am a CSE Master's student at Georgia Tech.</span>
             </Text>
             <Text isPC = { isPC() }>&emsp;&emsp;
-                <span>I see myself as a novelty seeker, a team player and an eclecticist. </span>
-                <span>During my undergraduate study, I actively took part in a variety of interdisciplinary research projects and internships </span>
-                <span>regarding structural analysis, </span>
-                <span>digital twin & machine learning, numerical simulation and software development. </span>
-                <span>I really learned a lot from these experience.</span>
+                <span>I see myself as a novelty seeker, a hard worker as well as a perfect team player. </span>
+                <span>The work and projects I have worked on in school were mainly about Digitalization and Machine Learning in Civil Engineering,</span>
+                <span>and through my last two years in undergraduate I participated in a couple of research programs and competitions.</span>
+                <span>They were quite interesting had potential applications in the future development and maintenance of structures.</span>
             </Text>
             <Text isPC = { isPC() }>&emsp;&emsp;
-                <span>I am a quite outgoing and approachable person. </span>
-                <span>I love to connect with people and to engage in a variety of social and sports activities. </span>
-                <span>Among all these, basketball, soccer, board games and Paradox games (they are awesome!) are my favorite. </span>
-                <span style = {{fontWeight: "bold"}}>I am looking for someone to share Spotify family plan. If you are interested, please contace me.</span>
-                <span>The photo on the right was shot by my GF during our trip to NYC in September. I super love NYC (and Ichiran) (and my GF).</span>
+                <span>I am good at a variety of games and activities. </span>
+                <span>Among all, basketball, soccer, and board games are my favorite. I also a big fan of Paradox games and I wasted a lot of time on them, which was not good.</span>
+                <span>The photo on the right was shot by my GF during our trip to SLC this winter. It was really a wonderful trip. Definitely would visit again.</span>
             </Text>
             <Text isPC = { isPC() }>&emsp;&emsp;
-                <span>My estimated graduation date is in May, 2023 and I am currently looking for 2022 summer internship opportunities. </span>
-                <span>Should you have any questions, please feel free to contact me. </span>
-                <span>I would really appreciate it if you could offer any job information, opportunities or referrals. </span>
+                <span>My graduate date can be either in Dec, 2022 or in May, 2023 depending on whether I need to conduct a Co-op internship or not.</span>
+                <span>I am currently looking for 2022 summer internship as well as Fall 2022 Co-op internship opportunities. </span>
+                <span>Please feel free to contact me :) </span>
             </Text>
 
             <Text isPC = { isPC() }>&emsp;&emsp;
                     <span>
-                        You can download my CV from
+                        You can download my resume through this
                     </span>
                     {' '}
                     <span>
                         <a style = {{display: "inline-block", fontWeight: 'bold'}}
                            href = "Resume-JiayuanChen.pdf"
                            target = "_blank">
-                            here
+                            link
                         </a>
                     </span>
                     {'.'}
